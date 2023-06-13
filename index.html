@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Weather_header">
+            <form class="Weather_search">
+                <input type="text" placeholder="Search for city" class="Weather_searchform">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+            <div class="Weather_units">
+                <span class="Weather_units_celsius">&#176C</span>
+                <span class="Weather_units_ferenhite">&#176F</span>
+            </div>
+        </div>
+        <div class="Weather_body">
+            <h1 class="Weather_city">Gurugram,Haryana</h1>
+            <div class="Weather_datetime"><p>Tuesday,13 June 2023</p></div>
+            <div class="Weather_forecast"><p>Clear</p></div>
+            <div class="Weather_icons">
+                <img src="http://openweathermap.org/img/wn/10d@4x.png">
+            </div>
+            <p class="Weather_temperature">41&#176</p>
+            <div class="Weather_minmax">
+                <p>Min : 28&#176</p>
+                <p>Max : 43&#176</p>
+            </div>
+            <div class="Weather_info">
+                <div class="Weather_card">
+                    <i class="fa-solid fa-temperature-full"></i>
+                    <div>
+                        <p>Real Feel</p>
+                        <p class="Weather_realfeel">42&#176</p>
+                    </div>
+                </div>
+                <div class="Weather_card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <p>Humidity</p>
+                        <p class="Weather_humidity">42&#176</p>
+                    </div>
+                </div>
+                <div class="Weather_card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p>Wind</p>
+                        <p class="Weather_wind">42&#176</p>
+                    </div>
+                </div>
+                <div class="Weather_card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <div>
+                        <p>Pressure</p>
+                        <p class="Weather_pressure">42&#176</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/46c7094569.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
