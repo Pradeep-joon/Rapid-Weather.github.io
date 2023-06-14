@@ -58,7 +58,7 @@ function convertTimeStamp (timestamp,timezone){
         year:"numeric",
         hour:"numeric",
         minute:"numeric",
-        timeZone:`Etc/GMT${convertTimeZONE>=0?"-":"+"}${Math.abs(convertTimeZONE)}`,
+        timezone:`Etc/GMT${convertTimeZONE>=0?"-":"+"}${Math.abs(convertTimeZONE)}`,
         hour12:true,
     }
     return date.toLocaleString("en-US",options)
