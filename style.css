@@ -12,7 +12,7 @@
     background: #000000;
     color: rgb(255, 255, 255);
     padding: 2rem;
-    width:40%;
+    width:auto;
     margin:4rem auto;
     border-radius:10px;
 }

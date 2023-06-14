@@ -26,6 +26,25 @@ let weatherPressure = document.querySelector(".Weather_pressure")
     currCity = search.value;
     // get weatherforecast
     getWeather();
+    //clear form 
+    search.value = ""
+ })
+
+ // units
+ document.querySelector(".Weather_units_celsius").addEventListener('click',()=>{
+    if(units!=="metric"){
+        //change to metric unit
+        units = "metric"
+        getWeather()
+    }
+ })
+
+ document.querySelector(".Weather_units_ferenhite").addEventListener('click',()=>{
+    if(units!=="imperial"){
+        //change to imperial unit
+        units = "imperial"
+        getWeather()
+    }
  })
 
 
@@ -39,7 +58,7 @@ function convertTimeStamp (timestamp,timezone){
         year:"numeric",
         hour:"numeric",
         minute:"numeric",
-        timezone:`Etc/GMT${convertTimeZONE>=0?"-":"+"}${Math.abs(convertTimeZONE)}`,
+        timeZone:`Etc/GMT${convertTimeZONE>=0?"-":"+"}${Math.abs(convertTimeZONE)}`,
         hour12:true,
     }
     return date.toLocaleString("en-US",options)
@@ -63,9 +82,13 @@ function getWeather(){
     weatherMinmax.innerHTML = `<p>Min:${data.main.temp_min.toFixed()}&#176</p><p> Max:${data.main.temp_max.toFixed()}&#176</p>`
     weatherRealfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`
     weatherHumidity.innerHTML = `${data.main.humidity}%`
-    weatherWind.innerHTML = `${data.wind.speed}m/s`
+    weatherWind.innerHTML = `${data.wind.speed}${units === "imperial"?"mph":"m/s"}`
     weatherPressure.innerHTML = `${data.main.pressure}hPa`
 
+})
+.catch(error => {
+    // Handle the rejected promise
+    console.error(error);
 })
 }
 
